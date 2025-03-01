@@ -6,6 +6,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
+
+app.get('/', async(req, res) => {
+  res.status(200).send("This is working");
+})
 app.post('/signup', async (req, res) => {
   // It's just a dummy service - we don't really care for the email
   const email = req.body.email;
